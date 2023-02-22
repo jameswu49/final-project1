@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 5%;
+  font-family: forum, sans-serif;
+}
+
+/* Navbar */
+
+.yellow {
+  background-color: #ffab2d;
+  height: 15px;
+  width: 90%;
+}
+
+.sides {
+  width: 90%;
+}
+
+.h4 {
+  display: block;
+}
