@@ -3,7 +3,6 @@
 }
 
 body {
-  padding: 0 5%;
   font-family: forum, sans-serif;
 }
 
@@ -11,14 +10,23 @@ body {
 
 .yellow {
   background-color: #ffab2d;
-  height: 15px;
-  width: 90%;
+  height: 1rem;
 }
 
-.sides {
-  width: 90%;
+@media screen and (min-width: 375px) {
+  .desktop {
+    display: none;
+  }
 }
 
-.h4 {
-  display: block;
+@media screen and (min-width: 768px) {
+  /* body {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 12%;
+  } */
+
+  .desktop {
+    display: block;
+  }
 }
