@@ -11,8 +11,8 @@ export default function Navbar() {
 
   return (
     <>
-      <div className='yellow fixed z-40 top-0.5 w-full md:w-[89vw]'/>
-      <nav className="px-2 w-full sm:px-4 md:hidden md:w-auto md:pr-[5.64rem] lg:w-80 py-2.5 fixed z-20 top-3 bg-white drop-shadow-md">
+      <div className='yellow sticky z-40 top-0 w-full'/>
+      <nav className="px-2 w-full sm:px-4 md:hidden md:w-auto md:pr-[5.64rem] lg:w-80 py-2.5 sticky z-20 top-3 bg-white drop-shadow-md">
         <div className="container sm:max-w-[46rem] flex flex-wrap items-center justify-center">
           <div className="text-center flex flex-col justify-center">
             <div className='text-base md:text-xl lg:text-3xl font-thin flex justify-center'>Abide</div>

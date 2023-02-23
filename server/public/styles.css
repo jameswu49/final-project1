@@ -10,23 +10,30 @@ body {
 
 .yellow {
   background-color: #ffab2d;
-  height: 1rem;
+  height: 0.5rem;
 }
 
-@media screen and (min-width: 375px) {
-  .desktop {
-    display: none;
-  }
+/* Carousel */
+
+.carousel-container {
+  border: 1px solid grey;
+  width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-  /* body {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 12%;
-  } */
+.left-arrow {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 5%;
+}
 
-  .desktop {
-    display: block;
-  }
+.right-arrow {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 5%;
 }
