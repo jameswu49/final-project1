@@ -1,10 +1,16 @@
 import React from 'react';
-import HelloWorld from '../components/hello-world';
+import Navbar from '../components/navbar';
+import DesktopNavBar from '../components/desktop-navbar';
+import banner from '../images/banner.gif';
+import Carousel from '../components/carousel';
 
 export default function Home(props) {
   return (
     <div>
-      <HelloWorld />
+      <Navbar />
+      <DesktopNavBar />
+      <img className='w-full drop-shadow' src={banner} alt="abide"/>
+      {/* <Carousel /> */}
     </div>
   );
 }

@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: forum, sans-serif;
+}
+
+/* Navbar */
+
+.yellow {
+  background-color: #ffab2d;
+  height: 0.5rem;
+}
+
+/* Carousel */
+
+.carousel-container {
+  border: 1px solid grey;
+  width: 100%;
+}
+
+.left-arrow {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 5%;
+}
+
+.right-arrow {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 5%;
+}
