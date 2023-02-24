@@ -1,10 +1,14 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import DesktopNavBar from '../components/desktop-navbar';
+import Footer from '../components/footer';
 import banner from '../images/banner.gif';
 import Carousel from '../components/carousel';
+import Location from '../components/location';
+import directions from '../images/location.png';
+import logo from '../images/logo.png';
 
-const data = [
+const pictures = [
   {
     title: 'Abide in Christ',
     img: 'https://images.pexels.com/photos/4080005/pexels-photo-4080005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
@@ -21,7 +25,9 @@ export default function Home(props) {
       <Navbar />
       <DesktopNavBar />
       <img className='w-full drop-shadow' src={banner} alt="abide"/>
-      <Carousel data={data} />
+      <Carousel pictures={pictures} />
+      <Location src={directions}/>
+      <Footer src={logo}/>
     </div>
   );
 }
