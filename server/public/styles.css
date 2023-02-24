@@ -4,6 +4,7 @@
 
 body {
   font-family: forum, sans-serif;
+  background-color: #fcfbfc;
 }
 
 /* Navbar */
@@ -11,6 +12,57 @@ body {
 .yellow {
   background-color: #ffab2d;
   height: 0.8rem;
+}
+
+/* Location */
+
+.background {
+  background-color: #d9d9d9;
+}
+
+.directions {
+  background-color: #879c6c;
+}
+
+.left-arrow {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10%;
+  cursor: pointer;
+}
+
+.right-arrow {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10%;
+}
+
+.circles {
+  text-align: center;
+  font-size: 15px;
+  width: 100%;
+}
+
+i {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.circles-container {
+  position: relative;
+  text-align: center;
+}
+
+.carousel-container {
+  border: 1px solid black;
+  margin-top: 5%;
+  width: 100%;
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
