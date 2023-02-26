@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from '../components/navbar';
 import DesktopNavBar from '../components/desktop-navbar';
 import Footer from '../components/footer';
-import banner from '../images/banner.gif';
 // import Carousel from '../components/carousel';
 import Location from '../components/location';
 
@@ -11,7 +10,7 @@ export default function Home(props) {
     <div>
       <Navbar />
       <DesktopNavBar />
-      <Banner src={banner}/>
+      <Banner/>
       {/* <Carousel pictures={pictures} /> */}
       <Location/>
       <Footer/>
@@ -21,7 +20,7 @@ export default function Home(props) {
 
 function Banner({ src }) {
   return (
-    <img className='w-full drop-shadow' src={src} alt="abide" />
+    <img className='w-full drop-shadow' src="images/banner.gif" alt="abide" />
   );
 }
 
