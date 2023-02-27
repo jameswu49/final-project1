@@ -35,7 +35,7 @@ export default function DesktopNavBar() {
           <Link className="block py-2 pl-3 pr-4 text-black text-sm lg:text-base rounded md:hover:text-black md:p-0" to="/about">About</Link>
         </li>
         <li>
-          <a href="#" className="block py-2 pl-3 pr-4 text-black text-sm lg:text-base rounded md:hover:text-black md:p-0">Connect</a>
+          <Link className="block py-2 pl-3 pr-4 text-black text-sm lg:text-base rounded md:hover:text-black md:p-0" to="/connect">Connect</Link>
         </li>
         <li>
           <a href="#" className="block py-2 pl-3 pr-4 text-black text-sm lg:text-base rounded md:hover:text-black md:p-0">Give</a>
