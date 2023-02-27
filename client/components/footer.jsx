@@ -1,9 +1,10 @@
 import React from 'react';
+import logo from '../images/logo.png';
 
 export default function Footer() {
   return (
     <>
-      <Logo/>
+      <Logo src={logo}/>
       <Address>1620 Fullerton Rd, La Habra Heights, CA 90631</Address>
     </>
   );
@@ -12,7 +13,7 @@ export default function Footer() {
 function Logo({ src }) {
   return (
     <div className="bg-white flex justify-center h-32 w-full md:h-56 lg:h-64">
-      <img src="images/logo.png" alt="logo" />
+      <img src={src} alt="logo" />
     </div>
   );
 }

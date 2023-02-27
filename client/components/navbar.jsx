@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [clicked, setClicked] = useState(false);
@@ -16,7 +15,8 @@ export default function Navbar() {
       <nav className="px-2 w-full sm:px-4 md:hidden md:w-auto md:pr-[5.64rem] lg:w-80 py-2.5 sticky z-20 top-3 bg-white drop-shadow-md">
         <div className="container sm:max-w-[46rem] flex flex-wrap items-center justify-center">
           <div className="text-center flex flex-col justify-center">
-            <Link className='text-base md:text-xl lg:text-3xl font-thin flex justify-center' to="/">Abide <br /> Ministries</Link>
+            <div className='text-base md:text-xl lg:text-3xl font-thin flex justify-center'>Abide</div>
+            <div className='text-base md:text-xl lg:text-3xl font-thin flex justify-center'>Ministries</div>
           </div>
           <a className="flex items-center" />
           <div className="flex md:order-2">
@@ -28,19 +28,19 @@ export default function Navbar() {
           <div className={`items-center justify-between ${toggleMenu} w-full md:flex md:w-auto md:order-1`} id="navbar-sticky">
             <ul className="flex flex-col sm:flex items-end p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
-                <Link className="block py-2 pl-3 pr-4 text-black text-sm rounded md:bg-transparent md:p-0 lg:text-base" to="https://www.youtube.com/@nasungicm3518/streams">Livestream</Link>
+                <a href="#" className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:bg-transparent md:p-0" aria-current="page">Livestream</a>
               </li>
               <li>
-                <Link className='className="block py-2 pl-3 pr-4 text-black text-sm rounded md:hover:text-black md:p-0 lg:text-base' to="https://www.youtube.com/@nasungicm3518/videos">Sermons</Link>
+                <a href="#" className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0">Sermons</a>
               </li>
               <li>
                 <a href="#" className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0">Resources</a>
               </li>
               <li>
-                <Link className="block py-2 pl-3 pr-4 text-black text-sm lg:text-base rounded md:hover:text-black md:p-0" to="/about">About</Link>
+                <a href="#" className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0">About</a>
               </li>
               <li>
-                <Link className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0" to="/connect">Connect</Link>
+                <a href="#" className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0">Connect</a>
               </li>
               <li>
                 <a href="#" className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0">Give</a>
