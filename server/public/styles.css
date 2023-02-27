@@ -1,10 +1,16 @@
+@import "https://fonts.googleapis.com/css2?family=Forum&family=Lato:wght@400;700&display=swap";
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: forum, sans-serif;
   background-color: #fcfbfc;
+  font-family: Lato, sans-serif;
+}
+
+.forum {
+  font-family: forum, sans-serif;
 }
 
 /* Navbar */
@@ -14,55 +20,32 @@ body {
   height: 0.8rem;
 }
 
+.gold-line {
+  border-bottom: 1px solid #ffab2d;
+}
+
+.golden {
+  color: #ffab2d;
+}
+
 /* Location */
 
-.background {
-  background-color: #d9d9d9;
+.grey {
+  background-color: #e8e8e8;
 }
 
 .directions {
   background-color: #879c6c;
 }
 
-.left-arrow {
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 10%;
-  cursor: pointer;
+/* Value Cards */
+
+.underline {
+  text-decoration-color: #ffab2d;
 }
 
-.right-arrow {
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  margin-right: 10%;
-}
-
-.circles {
-  text-align: center;
-  font-size: 15px;
-  width: 100%;
-}
-
-i {
-  padding: 0 10px;
-  cursor: pointer;
-}
-
-.circles-container {
-  position: relative;
-  text-align: center;
-}
-
-.carousel-container {
-  border: 1px solid black;
-  margin-top: 5%;
-  width: 100%;
-  position: relative;
+.test {
+  border: 2px solid pink;
 }
 
 @media screen and (min-width: 768px) {
@@ -71,15 +54,3 @@ i {
     padding-right: 2.5rem;
   }
 }
-
-/* @media screen and (min-width: 1024px) {
-  body {
-    padding: 0, 5rem;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  body {
-    padding: 0, 10rem;
-  }
-} */

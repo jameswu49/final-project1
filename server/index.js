@@ -4,6 +4,7 @@ const pg = require('pg');
 const staticMiddleware = require('./static-middleware');
 const ClientError = require('./client-error');
 const errorMiddleware = require('./error-middleware');
+const path = require('path');
 
 const db = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
@@ -112,6 +113,10 @@ app.get('/api/newcomer/:newcomerId', async (req, res, next) => {
   } catch (err) {
     next((err));
   }
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 app.put('/api/member/:memberId', async (req, res, next) => {
