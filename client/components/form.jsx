@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Form() {
   return (
@@ -7,8 +8,8 @@ export default function Form() {
         <img src="images/logo.png" alt="logo" />
       </div>
       <div>
-        <h1 className='text-center mb-2 font-bold'>Connect with Us</h1>
-        <Fields/>
+        <h1 className='text-center mb-2 font-bold md:text-base lg:text-lg xl:text-xl'>Connect with Us</h1>
+        <Fields />
       </div>
     </>
   );
@@ -25,45 +26,61 @@ function Fields() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // console.log(name, email, message);
-    setName('');
-    setEmail('');
-    setMessage('');
   };
 
   return (
-    <form className='flex flex-col items-center' onSubmit={handleSubmit}>
-      <label>
-        <div className='font-bold'>Name:</div>
-        <input className='py-0 w-64' type="text" value={name} onChange={handleNameChange} required />
-      </label>
-      <br />
-      <label>
-        <div className='font-bold'>
-          Email:
-        </div>
-        <input className='py-0 w-64' type="email" value={email} onChange={handleEmailChange} required />
-      </label>
-      <br />
-      <label>
-        <div className='font-bold'>
-          Message:
-        </div>
-        <textarea className='w-64' rows="5" value={message} onChange={handleMessageChange} required/>
-      </label>
-      <br />
-      <div className='border border-black w-20 text-center'>
-        <button type="submit">Submit</button>
-      </div>
-    </form>
+    <div className='flex justify-center'>
+      <form className='flex flex-col items-center py-5 w-fit px-10' onSubmit={handleSubmit}>
+        <Name name={name} handleNameChange={handleNameChange} />
+        <br />
+        <Email email={email} handleEmailChange={handleEmailChange} />
+        <br />
+        <Message message={message} handleMessageChange={handleMessageChange} />
+        <br />
+        <Submit name={name} email={email} message={message} />
+      </form>
+    </div>
   );
 }
 
-// function Name({ handleNameChange }) {
-//   return (
-//     <label>
-//       <div className='font-bold'>Name:</div>
-//       <input className='py-0 w-64' type="text" value={name} onChange={handleNameChange} required />
-//     </label>
-//   );
-// }
+function Name({ handleNameChange, name }) {
+  return (
+    <label>
+      <div className='font-bold'>Name:</div>
+      <input className='p-0 w-64 md:w-80 lg:w-96' type="text" value={name} onChange={handleNameChange} required />
+    </label>
+  );
+}
+
+function Email({ handleEmailChange, email }) {
+  return (
+    <label>
+      <div className='font-bold'>
+        Email:
+      </div>
+      <input className='p-0 w-64 md:w-80 lg:w-96' type="email" value={email} onChange={handleEmailChange} required />
+    </label>
+  );
+}
+
+function Message({ message, handleMessageChange }) {
+  return (
+    <label>
+      <div className='font-bold'>
+        Message:
+      </div>
+      <textarea className='w-64 md:w-80 lg:w-96' rows="5" value={message} onChange={handleMessageChange} required />
+    </label>
+  );
+}
+
+function Submit({ name, email, message }) {
+  // const handleClick = () => console.log(name, email, message);
+  return (
+    <div className="flex justify-center cursor-pointer">
+      <Link to="/submitted">
+        {/* <button className='directions order-2 rounded w-28 h-8 text-white mt-5' onClick={handleClick}>Submit</button> */}
+      </Link>
+    </div>
+  );
+}
