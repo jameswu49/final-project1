@@ -41,8 +41,7 @@ function Info({ index, children }) {
         <div className="col-span-4">
           <img className='min-w-full min-h-full md:h-auto md:w-auto' src="images/church.png" alt="" />
         </div>
-        <div className="flex items-center grey h-auto text-[0.6rem] px-5 p-8 leading-3 col-span-8 md:text-sm md:leading-7 md:px-16 md:py-16 lg:text-lg 2xl:text-2xl 2xl:px-56">
-          {children}
+        <div className="flex items-center grey text-[0.6rem] h-auto px-5 py-8 leading-3 col-span-8 md:text-sm md:leading-7 md:px-16 md:py-16 lg:text-lg lg:py-36 lg:px-32 2xl:text-2xl 2xl:px-56">          {children}
         </div>
       </>
     );

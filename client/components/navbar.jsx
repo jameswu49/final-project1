@@ -43,7 +43,7 @@ export default function Navbar() {
                 <Link className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0" to="/connect">Connect</Link>
               </li>
               <li>
-                <a href="#" className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0">Give</a>
+                <Link className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0" to="/give">Give</Link>
               </li>
             </ul>
           </div>

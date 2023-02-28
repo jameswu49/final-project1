@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Form() {
   return (
@@ -23,11 +23,27 @@ function Fields() {
   const handleNameChange = e => setName(e.target.value);
   const handleEmailChange = e => setEmail(e.target.value);
   const handleMessageChange = e => setMessage(e.target.value);
+  const navigate = useNavigate();
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
+    try {
+      const data = { name, email, message };
+      // eslint-disable-next-line no-unused-vars
+      const response = await fetch('api/newcomer', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      navigate('/submitted');
+    } catch (error) {
+      return (
+        console.error(error)
+      );
+    }
   };
-
   return (
     <div className='flex justify-center'>
       <form className='flex flex-col items-center py-5 w-fit px-10' onSubmit={handleSubmit}>
@@ -43,7 +59,7 @@ function Fields() {
   );
 }
 
-function Name({ handleNameChange, name }) {
+export function Name({ handleNameChange, name }) {
   return (
     <label>
       <div className='font-bold'>Name:</div>
@@ -52,7 +68,7 @@ function Name({ handleNameChange, name }) {
   );
 }
 
-function Email({ handleEmailChange, email }) {
+export function Email({ handleEmailChange, email }) {
   return (
     <label>
       <div className='font-bold'>
@@ -74,13 +90,10 @@ function Message({ message, handleMessageChange }) {
   );
 }
 
-function Submit({ name, email, message }) {
-  // const handleClick = () => console.log(name, email, message);
+export function Submit({ name, email, message }) {
   return (
     <div className="flex justify-center cursor-pointer">
-      <Link to="/submitted">
-        {/* <button className='directions order-2 rounded w-28 h-8 text-white mt-5' onClick={handleClick}>Submit</button> */}
-      </Link>
+      <button className='directions order-2 rounded w-28 h-8 text-white mt-5'>Submit</button>
     </div>
   );
 }
