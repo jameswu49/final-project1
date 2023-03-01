@@ -28,6 +28,10 @@ body {
   color: #ffab2d;
 }
 
+.links:hover {
+  color: #ffab2d;
+}
+
 /* Location */
 
 .grey {

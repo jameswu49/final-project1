@@ -16,6 +16,7 @@
 // }
 
 // function Form() {
+//   const [amount, setAmount] = useState('');
 //   const [name, setName] = useState('');
 //   const [email, setEmail] = useState('');
 //   const [address, setAddress] = useState('');
@@ -27,19 +28,20 @@
 //   const [expDate, setExpDate] = useState('');
 //   const [code, setCode] = useState('');
 
-//   const handleNameChange = e => setName(e.target.value);
-//   const handleEmailChange = e => setEmail(e.target.value);
-//   const handleAddressChange = e => setAddress(e.target.value);
-//   const handleCityChange = e => setCity(e.target.value);
-//   const handleStateChange = e => setState(e.target.value);
-//   const handleZipChange = e => setZip(e.target.value);
-//   const handleCountryChange = e => setCountry(e.target.value);
-//   const handleCardNumChange = e => setCardNum(e.target.value);
-//   const handleExpDateChange = e => setExpDate(e.target.value);
-//   const handleCodeChange = e => setCode(e.target.value);
+//   const handleAmountChange = (e) => setAmount(e.target.value);
+//   const handleNameChange = (e) => setName(e.target.value);
+//   const handleEmailChange = (e) => setEmail(e.target.value);
+//   const handleAddressChange = (e) => setAddress(e.target.value);
+//   const handleCityChange = (e) => setCity(e.target.value);
+//   const handleStateChange = (e) => setState(e.target.value);
+//   const handleZipChange = (e) => setZip(e.target.value);
+//   const handleCountryChange = (e) => setCountry(e.target.value);
+//   const handleCardNumChange = (e) => setCardNum(e.target.value);
+//   const handleExpDateChange = (e) => setExpDate(e.target.value);
+//   const handleCodeChange = (e) => setCode(e.target.value);
 
-//   const handleSubmit = async e => {
-//     const data = { name, email, address, city, state, zip, country, cardNum, expDate, code };
+//   const handleSubmit = async (e) => {
+//     const data = { amount, name, email, address, city, state, zip, country, cardNum, expDate, code };
 //     // e.preventDefault();
 //     console.log(data);
 
@@ -52,9 +54,20 @@
 //         <br />
 //         <Email email={email} handleEmailChange={handleEmailChange} />
 //         <br />
+//         <Address address={address} handleAddressChange={handleAddressChange} />
+//         <br />
 //         <Submit/>
 //         <br />
 //       </form>
 //     </div>
+//   );
+// }
+
+// function Address({ address, handleAddressChange }) {
+//   return (
+//     <label>
+//       <div className='font-bold'>Billing Address:</div>
+//       <input className='p-0 w-64 md:w-80 lg:w-96' type="text" value={address} onChange={handleAddressChange} required />
+//     </label>
 //   );
 // }
