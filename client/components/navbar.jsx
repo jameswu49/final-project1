@@ -31,7 +31,7 @@ export default function Navbar() {
                 <Link className="block py-2 pl-3 pr-4 text-black text-sm rounded md:bg-transparent md:p-0 lg:text-base" to="https://www.youtube.com/@nasungicm3518/streams">Livestream</Link>
               </li>
               <li>
-                <Link className='className="block py-2 pl-3 pr-4 text-black text-sm rounded md:hover:text-black md:p-0 lg:text-base' to="https://www.youtube.com/@nasungicm3518/videos">Sermons</Link>
+                <Link className='className="block py-2 pl-3 pr-4 text-black text-sm rounded md:hover:text-black md:p-0 lg:text-base' to="/sermons">Sermons</Link>
               </li>
               <li>
                 <a href="#" className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0">Resources</a>
@@ -43,7 +43,7 @@ export default function Navbar() {
                 <Link className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0" to="/connect">Connect</Link>
               </li>
               <li>
-                <Link className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0" to="/give">Give</Link>
+                <Link className="block py-2 pl-3 pr-4 text-black text-sm lg:text-md rounded md:hover:text-black md:p-0" to="https://buy.stripe.com/test_28o00Ybn481q6NW3cc">Give</Link>
               </li>
             </ul>
           </div>

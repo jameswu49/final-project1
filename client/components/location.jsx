@@ -5,8 +5,8 @@ export default function Location() {
   return (
     <div className='grey h-auto pb-5'>
       <Header>Join us on Sunday!</Header>
-      <Info>Sunday 11am in the English Ministry Room</Info>
       <Map/>
+      <Info />
       <Button>Directions</Button>
     </div>
   );
@@ -22,9 +22,17 @@ function Header({ children }) {
 
 function Info({ children }) {
   return (
-    <p className='flex justify-center leading-10 pb-2 text-sm text-center 2xl:text-xl'>
-      {children}
-    </p>
+    <div className='flex justify-center leading-10 pb-2 text-sm text-center 2xl:text-xl flex-col'>
+      <p className='underline decoration-black font-bold pt-4'>
+        Worship Service
+      </p>
+      <p className='leading-3 2xl:leading-10'>
+        Time: 11am
+      </p>
+      <p>
+        1620 Fullerton Rd, La Habra Heights, CA 90631
+      </p>
+    </div>
   );
 }
 

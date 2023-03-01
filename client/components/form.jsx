@@ -20,17 +20,16 @@ function Fields() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleNameChange = e => setName(e.target.value);
-  const handleEmailChange = e => setEmail(e.target.value);
-  const handleMessageChange = e => setMessage(e.target.value);
+  const handleNameChange = (e) => setName(e.target.value);
+  const handleEmailChange = (e) => setEmail(e.target.value);
+  const handleMessageChange = (e) => setMessage(e.target.value);
   const navigate = useNavigate();
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const data = { name, email, message };
-      // eslint-disable-next-line no-unused-vars
-      const response = await fetch('api/newcomer', {
+      await fetch('api/newcomer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
