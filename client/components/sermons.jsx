@@ -40,19 +40,3 @@ export default function VideoList() {
     </>
   );
 }
-
-// function Sermons({ videos }) {
-//   <ul>
-//     {videos.map((video) => (
-//       <li key={video.id.videoId}>
-//         <iframe
-//           src={`https://www.youtube.com/embed/${video.id.videoId}`}
-//           title={video.snippet.title}
-//           frameBorder="0"
-//           allow="autoplay; encrypted-media"
-//           allowFullScreen
-//         />
-//       </li>
-//     ))}
-//   </ul>;
-// }
