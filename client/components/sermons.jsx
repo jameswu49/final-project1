@@ -14,21 +14,45 @@ export default function VideoList() {
   }, []);
 
   return (
-    <ul>
-      {videos.map((video) => (
-        <li key={video.id.videoId}>
-          <iframe
-            src={`https://www.youtube.com/embed/${video.id.videoId}`}
-            title={video.snippet.title}
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-          />
-          <div className='flex justify-center mb-4 text-base p-2'>
-            <h1>{video.snippet.title}</h1>
-          </div>
-        </li>
-      ))}
-    </ul>
+    <>
+      <div className='text-center'>
+        <h1 className='text-2xl text-gray-800 my-4'>Sermons</h1>
+      </div>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {videos.map((video) => (
+          <li key={video.id.videoId} className="flex flex-col justify-center items-center">
+            <div className="w-full h-0 relative" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src={`https://www.youtube.com/embed/${video.id.videoId}`}
+              title={video.snippet.title}
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+            </div>
+            <div className='flex justify-center mb-4 text-base p-2'>
+              <h1 className="<h1 className='text-2xl text-gray-800'>{video.snippet.title}</h1>">{video.snippet.title}</h1>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
+
+// function Sermons({ videos }) {
+//   <ul>
+//     {videos.map((video) => (
+//       <li key={video.id.videoId}>
+//         <iframe
+//           src={`https://www.youtube.com/embed/${video.id.videoId}`}
+//           title={video.snippet.title}
+//           frameBorder="0"
+//           allow="autoplay; encrypted-media"
+//           allowFullScreen
+//         />
+//       </li>
+//     ))}
+//   </ul>;
+// }

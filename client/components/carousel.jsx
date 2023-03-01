@@ -14,14 +14,10 @@ export default function Carousel() {
     autoplay: false
   };
   return (
-    <div className="pb-10 md:border-solid md:border-black md:border-[1px]">
+    <div className="pb-10">
       <Slider {...settings}>
-        <div className='text-center'>
-          <h1>Abide in Christ</h1>
-          <div className="justify-center grid grid-cols-2">
-            <img src="http://placekitten.com/g/400/200" />
-            <h1>test</h1>
-          </div>
+        <div>
+          <img className='w-full' src="https://cdn.businessyab.com/assets/uploads/cc0d6357f11f6f4258719dec1c7ba88a__united_states_california_los_angeles_county_la_habra_heights_fullerton_road_1620_na_sung_churchhtml.jpg" />
         </div>
         <div className='text-center'>
           <h1>Build the Church</h1>
