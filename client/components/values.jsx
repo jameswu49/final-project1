@@ -16,14 +16,14 @@ function Text({ data }) {
           <div className='flex justify-center text-[0.7rem] py-3 font-semibold underline underline-offset-4 decoration-2 bg-white col-span-12 md:text-base md:py-5 lg:py-8 lg:text-xl 2xl:text-2xl'>
             {elements.header}
           </div>
-          <Info index={index}>{elements.info}</Info>
+          <Info index={index} src={elements.src}>{elements.info}</Info>
         </div>
       ))}
     </>
   );
 }
 
-function Info({ index, children }) {
+function Info({ index, children, src }) {
   if (index % 2 === 0) {
     return (
       <>
@@ -31,7 +31,7 @@ function Info({ index, children }) {
           {children}
         </div>
         <div className="col-span-4">
-          <img className='min-w-full min-h-full md:h-auto md:w-auto' src="images/church.png" alt="" />
+          <img className='min-w-full min-h-full md:h-auto md:w-auto p-9 md:p-16 2xl:p-32' src={src} alt="" />
         </div>
       </>
     );
@@ -39,9 +39,10 @@ function Info({ index, children }) {
     return (
       <>
         <div className="col-span-4">
-          <img className='min-w-full min-h-full md:h-auto md:w-auto' src="images/church.png" alt="" />
+          <img className='min-w-full min-h-full md:h-auto md:w-auto p-9 md:p-16 2xl:p-32' src={src} alt="" />
         </div>
-        <div className="flex items-center grey text-[0.6rem] h-auto px-5 py-8 leading-3 col-span-8 md:text-sm md:leading-7 md:px-16 md:py-16 lg:text-lg lg:py-36 lg:px-32 2xl:text-2xl 2xl:px-56">          {children}
+        <div className="flex items-center grey text-[0.6rem] h-auto px-5 py-8 leading-3 col-span-8 md:text-sm md:leading-7 md:px-16 md:py-16 lg:text-lg lg:py-36 lg:px-32 2xl:text-2xl 2xl:px-56">
+          {children}
         </div>
       </>
     );

@@ -7,29 +7,21 @@ export default function Carousel() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: false
+    autoplay: true,
+    autoplaySpeed: 5000
   };
   return (
     <div className="pb-10">
       <Slider {...settings}>
         <div>
-          <img className='w-full' src="https://cdn.businessyab.com/assets/uploads/cc0d6357f11f6f4258719dec1c7ba88a__united_states_california_los_angeles_county_la_habra_heights_fullerton_road_1620_na_sung_churchhtml.jpg" />
+          <img className='h-full w-full' src="images/outside.jpeg" />
         </div>
-        <div className='text-center'>
-          <h1>Build the Church</h1>
-          <div className="flex justify-center">
-            <img src="http://placekitten.com/g/400/200" />
-          </div>
-        </div>
-        <div className='text-center'>
-          <h1>Go to the Nations</h1>
-          <div className="flex justify-center">
-            <img src="http://placekitten.com/g/400/200" />
-          </div>
+        <div className="flex justify-center">
+          <img className='h-full w-full' src="images/nasung.jpeg" />
         </div>
       </Slider>
     </div>

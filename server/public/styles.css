@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Forum&family=Lato:wght@400;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=Forum&family=Lato:wght@400;700&family=Poiret+One&display=swap";
 
 * {
   box-sizing: border-box;
@@ -11,6 +11,15 @@ body {
 
 .forum {
   font-family: forum, sans-serif;
+}
+
+.libre {
+  font-family: "David Libre", serif;
+}
+
+.bold-libre {
+  font-family: "David libre", serif;
+  font-weight: 700;
 }
 
 /* Navbar */
@@ -28,8 +37,76 @@ body {
   color: #ffab2d;
 }
 
+.border-top {
+  border-top: 13px solid #ffab2d;
+}
+
+.navy {
+  color: #055070;
+}
+
 .links:hover {
   color: #ffab2d;
+}
+
+.hide {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  display: flex;
+  visibility: hidden;
+  left: 0%;
+  height: 50px;
+  align-items: center;
+}
+
+.show {
+  animation: slidein 1s forwards;
+  top: 92px;
+  visibility: visible;
+}
+
+.hide-out {
+  animation: slideout 1s forwards;
+  visibility: hidden;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(0%);
+    visibility: hidden;
+    opacity: 0;
+    top: 40px;
+  }
+
+  to {
+    transform: translateY(100%);
+    visibility: visible;
+    opacity: 1;
+    top: 17px;
+  }
+}
+
+@keyframes slideout {
+  from {
+    transform: translateY(100%);
+    visibility: visible;
+    top: 17px;
+  }
+
+  to {
+    transform: translateY(0%);
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+  }
+}
+
+.line {
+  background-color: #ffab2d;
+  width: 1rem;
+  margin: 0.5rem;
+  height: 0.2rem;
 }
 
 /* Location */
@@ -52,9 +129,60 @@ body {
   border: 2px solid pink;
 }
 
+.border {
+  border-color: #ffab2d;
+  background-color: #ffab2d;
+}
+
+@media screen and (max-width: 768px) {
+  @keyframes slidein {
+    from {
+      transform: translateY(0%);
+      visibility: hidden;
+    }
+
+    to {
+      transform: translateY(10%);
+      visibility: visible;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   body {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  @keyframes slidein {
+    from {
+      transform: translateY(0%);
+      visibility: hidden;
+      top: 70px;
+    }
+
+    to {
+      transform: translateY(100%);
+      visibility: visible;
+      top: 33px;
+    }
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  @keyframes slidein {
+    from {
+      transform: translateY(0%);
+      visibility: hidden;
+      top: 70px;
+    }
+
+    to {
+      transform: translateY(100%);
+      visibility: visible;
+      top: 31px;
+    }
   }
 }

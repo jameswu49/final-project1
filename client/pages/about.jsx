@@ -20,14 +20,17 @@ export default function About() {
 const data = [
   {
     header: 'Vision Statement',
-    info: 'We exist to glorify God by gathering as disciples who abide in the vine, love the church and bring the hope of the gospel to our neighbors and to unreached language groups of the world.'
+    info: 'We exist to glorify God by gathering as disciples who abide in the vine, love the church and bring the hope of the gospel to our neighbors and to unreached language groups of the world.',
+    src: 'images/vine.png'
   },
   {
     header: 'The Core Values',
-    info: 'A core value is that which is most important to a church. Pillars and columns that hold the vision of the church up and standing. The DNA of our church is a part of every thing we decide to do in our church.'
+    info: 'We are committed to learning the purpose of the church and BEING and BUILDING the church for His glory.',
+    src: 'images/build.png'
   },
   {
     header: 'Biblical Strategy',
-    info: '  The strategic road by which we will accomplish each of our core values. The purpose of church and core values influence what we do in church. Within our means we have the goal of each ministry and the road to get there.'
+    info: 'Our AIM is to move our people along to become Disciples who love Jesus and abide in him daily, who love and build his church and who are actively participating in His mission to seek and save the lost.',
+    src: 'images/go.png'
   }
 ];
