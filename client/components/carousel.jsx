@@ -7,33 +7,21 @@ export default function Carousel() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: false
+    autoplay: true,
+    autoplaySpeed: 5000
   };
   return (
-    <div className="pb-10 md:border-solid md:border-black md:border-[1px]">
+    <div className="pb-10">
       <Slider {...settings}>
-        <div className='text-center'>
-          <h1>Abide in Christ</h1>
-          <div className="justify-center grid grid-cols-2">
-            <img src="http://placekitten.com/g/400/200" />
-            <h1>test</h1>
-          </div>
+        <div>
+          <img className='h-full w-full' src="images/outside.jpeg" />
         </div>
-        <div className='text-center'>
-          <h1>Build the Church</h1>
-          <div className="flex justify-center">
-            <img src="http://placekitten.com/g/400/200" />
-          </div>
-        </div>
-        <div className='text-center'>
-          <h1>Go to the Nations</h1>
-          <div className="flex justify-center">
-            <img src="http://placekitten.com/g/400/200" />
-          </div>
+        <div className="flex justify-center">
+          <img className='h-full w-full' src="images/nasung.jpeg" />
         </div>
       </Slider>
     </div>
