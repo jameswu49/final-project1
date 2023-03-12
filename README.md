@@ -4,7 +4,7 @@ A full stack JavaScript application for people that are interested in checking o
 
 ## Why I Built This
 
-Our church currently doesn't have a website, so I created a mockup of it after collaborating with one of the leaders of the church.
+Our church currently doesn't have a website, so I created a mockup of it to share information about our church with others.
 
 ## Technologies Used
 
