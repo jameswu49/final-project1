@@ -5,10 +5,12 @@ import Connect from './pages/connect';
 import Submitted from './pages/submitted';
 import Sermons from './pages/sermons';
 import { Route, Routes } from 'react-router-dom';
+import ScrollToTop from './components/scroll-to-top';
 
 export default function App() {
   return (
     <div>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
