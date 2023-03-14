@@ -21,7 +21,7 @@ Our church currently doesn't have a website, so I created a mockup of it to shar
 
 ## Live Demo
 
-Try the application live at [https://student-grade-table.lfz.com](https://student-grade-table.lfz.com)
+Try the application live at [https://abide-ministries.herokuapp.com/](https://abide-ministries.herokuapp.com/)
 
 ## Features
 
