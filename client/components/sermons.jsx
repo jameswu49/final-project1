@@ -6,7 +6,17 @@ export default function VideoList() {
   useEffect(() => {
     async function fetchVideos() {
       try {
-        const response = await fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyBEYvQw2VN_9-CsZhjPVTte3BA6c5JYD7A&channelId=UCPyVwBGuNgaeoqc8Mas5AOw&part=snippet,id&order=date&maxResults=20');
+        const response = await fetch('/sermons', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Error: ' + response.status);
+        }
+
         const data = await response.json();
         setVideos(data.items);
       } catch (error) {
