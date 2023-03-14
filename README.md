@@ -4,7 +4,7 @@ A full stack JavaScript application for people that are interested in checking o
 
 ## Why I Built This
 
-Our church currently doesn't have a website, so I created a mockup of it to share information about our church with others.
+I wanted to create an application that allows people to see information of the church and what they believe in.
 
 ## Technologies Used
 
@@ -33,9 +33,9 @@ Try the application live at [https://abide-ministries.herokuapp.com/](https://ab
 
 ## Preview
 
-[Home Page](server/public/images/landing.gif)
+![Home Page](server/public/images/landing.gif)
 
-[Sermons](server/public/images/sermons.gif)
+![Sermons](server/public/images/sermons.gif)
 
 ## Stretch Features
 
@@ -61,23 +61,40 @@ Try the application live at [https://abide-ministries.herokuapp.com/](https://ab
 
     ```shell
     npm install
-    "express": "^4.18.2",
-    "jsonwebtoken": "^8.5.1",
-    "pg": "^8.8.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.1",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
     ```
 
-3. Import the example database to PostgreSQL.
+3. Start PostgreSQL
 
     ```shell
-    npm run db:import --db=abideMinistries database/dump.json
+    sudo service postgresql start
     ```
 
-4. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
+4. Create a local .env file from provided example file
+
+    ```shell
+    cp .env.example .env
+    ```
+
+5. Update the DATABASE_URL in the .env file. Update 'changeMe' to the name-of-database you wish to create.
+
+    ```shell
+    DATABASE_URL=postgres://dev:dev@localhost/changeMe?sslmode=disable
+    ```
+
+6. Create a database using the name-of-database set in the .env file.
+
+    ```shell
+    createdb name-of-database
+    ```
+
+7. Import the example database to PostgreSQL and start the database (http://localhost:8081/).
+
+    ```shell
+    npm run db:import
+    pgweb --db=abideMinistries
+    ```
+
+8. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
 
     ```shell
     npm run dev

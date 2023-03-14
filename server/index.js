@@ -18,44 +18,6 @@ const app = express();
 app.use(staticMiddleware);
 app.use(express.json());
 
-app.get('/api/member', async (req, res, next) => {
-  try {
-    const sql = `
-    select *
-      from "member"
-  `;
-    const result = await db.query(sql);
-    const member = result.rows;
-    res.json(member);
-  } catch (err) {
-    next(err);
-  }
-});
-
-app.get('/api/member/:memberId', async (req, res, next) => {
-  const memberId = Number(req.params.memberId);
-  try {
-    if (!Number.isInteger(memberId) || memberId < 1) {
-      throw new ClientError(400, 'grade must be a positive integer');
-    }
-    const sql = `
-    select *
-      from "member"
-     where "memberId" = $1
-  `;
-    const params = [memberId];
-    const result = await db.query(sql, params);
-    const [member] = result.rows;
-    if (!member) {
-      throw new ClientError(404, `cannot find grade with memberId ${memberId}`);
-    } else {
-      res.json(member);
-    }
-  } catch (err) {
-    next((err));
-  }
-});
-
 app.post('/sermons', async (req, res, next) => {
   try {
     const KEY = process.env.YOUTUBE_API_KEY;
@@ -129,60 +91,6 @@ app.get('/api/newcomer/:newcomerId', async (req, res, next) => {
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
-});
-
-app.put('/api/member/:memberId', async (req, res, next) => {
-  const memberId = Number(req.params.memberId);
-  try {
-    if (!Number.isInteger(memberId) || memberId < 1) {
-      throw new ClientError(400, 'memberId must be a positive integer');
-    }
-    const { name, email } = req.body;
-    if (!name || !email) {
-      throw new ClientError(400, 'name and email, are required fields');
-    }
-    const sql = `
-    update "member"
-       set "name" = $1,
-           "email" = $2
-     where "memberId" = $3
-    returning *
-  `;
-    const params = [name, email, memberId];
-    const result = await db.query(sql, params);
-    const [updatedMember] = result.rows;
-    if (!updatedMember) {
-      throw new ClientError(404, `cannot find grade with gradeId ${memberId}`);
-    } else {
-      res.json(updatedMember);
-    }
-  } catch (err) {
-    next((err));
-  }
-});
-
-app.delete('/api/member/:memberId', async (req, res, next) => {
-  try {
-    const memberId = Number(req.params.memberId);
-    if (!Number.isInteger(memberId) || memberId < 1) {
-      throw new ClientError(400, 'memberId must be a positive integer');
-    }
-    const sql = `
-    delete from "member"
-     where "memberId" = $1
-    returning *
-  `;
-    const params = [memberId];
-    const result = await db.query(sql, params);
-    const [deletedMember] = result.rows;
-    if (!deletedMember) {
-      throw new ClientError(404, `cannot find grade with gradeId ${memberId}`);
-    } else {
-      res.sendStatus(204);
-    }
-  } catch (err) {
-    next((err));
-  }
 });
 
 app.use(errorMiddleware);
