@@ -21,7 +21,7 @@ Our church currently doesn't have a website, so I created a mockup of it to shar
 
 ## Live Demo
 
-Try the application live at [https://student-grade-table.lfz.com](https://student-grade-table.lfz.com)
+Try the application live at [https://abide-ministries.herokuapp.com/](https://abide-ministries.herokuapp.com/)
 
 ## Features
 
@@ -33,14 +33,13 @@ Try the application live at [https://student-grade-table.lfz.com](https://studen
 
 ## Preview
 
-[Home Page](images/landing.gif)
+[Home Page](server/public/images/landing.gif)
 
-[Sermons](images/sermons.gif)
+[Sermons](server/public/images/sermons.gif)
 
 ## Stretch Features
 
-(if website becomes official)
-- Plan to add more information for lifegroups and recommended readings
+- Plan to create pages for lifegroups and recommended readings
 - Plan to expand more on core values and missions
 - Plan to update pictures
 
