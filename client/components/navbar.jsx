@@ -7,7 +7,6 @@ export default function Navbar() {
 
   function handleClick() {
     setClicked(!clicked);
-    // document.body.style.overflow = clicked ? 'auto' : 'hidden';
   }
 
   function setLink() {

@@ -56,6 +56,18 @@ app.get('/api/member/:memberId', async (req, res, next) => {
   }
 });
 
+app.post('/sermons', async (req, res, next) => {
+  try {
+    const KEY = process.env.YOUTUBE_API_KEY;
+    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${KEY}&channelId=UCPyVwBGuNgaeoqc8Mas5AOw&part=snippet,id&order=date&maxResults=20`);
+    const data = await response.json();
+    res.status(200).send(data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send(error.message);
+  }
+});
+
 app.post('/api/newcomer', async (req, res, next) => {
   const { name, email, message } = req.body;
   try {

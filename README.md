@@ -37,6 +37,13 @@ Try the application live at [https://student-grade-table.lfz.com](https://studen
 
 [Sermons](images/sermons.gif)
 
+## Stretch Features
+
+(if website becomes official)
+- Plan to add more information for lifegroups and recommended readings
+- Plan to expand more on core values and missions
+- Plan to update pictures
+
 ### System Requirements
 
 - Node.js 10 or higher
